@@ -1,0 +1,110 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+% Set margins
+\usepackage[top=2cm, left=2cm, right=2cm, bottom=2cm]{geometry}
+\usepackage{enumitem}
+\setlist[itemize,2]{label=$\circ$}
+% Use the multicol package to set the document to two columns
+\usepackage{multicol}
+\setlength{\columnsep}{20pt}
+
+% Use a readable font
+\usepackage{palatino}
+
+% Set spacing
+\setlength{\parindent}{0pt} % No paragraph indentation
+\setlength{\parskip}{6pt} % Add space between paragraphs
+
+
+\title{A Summary of Holden Karnofsky's \textit{Racing through a minefield: the AI deployment problem}}
+\author{Angus Robinson, 20 March 2023}
+\date{}
+
+\begin{document}
+
+% Use the multicol environment to set the document to two columns
+
+\maketitle
+\begin{multicols}{2}
+
+\section{Overview}
+This blog post presents the AI deployment problem, which is that we want to deploy transformative AI slowly and carefully to avoid catastrophe, but the benefits of being the first group of people to deploy it could be huge, creating a race dynamic which makes careful deployment unlikely. Karnofsky stresses the importance of using national and company governance to ensure sufficient alignment research, the right level of information sharing, and monitoring of dangerous AI projects. Find the original (from December 2022) at \href{https://www.cold-takes.com/racing-through-a-minefield-the-ai-deployment-problem/}{https://www.cold-takes.com/racing-through-a-minefield-the-ai-deployment-problem/}.
+
+\section*{The Minefield analogy}
+The ''racing through a minefield'' analogy illustrates the tension between moving fast enough to stay ahead of others and moving slow enough to avoid causing disaster. Cautious actors need to balance the development of powerful and safe AI systems to ''contain'' incautious actors while not causing disaster themselves.
+
+\section{Premises of ''Racing Through a Minefield''}
+\begin{enumerate}
+\item Transformative AI soon: AI systems capable of automating all human tasks related to science and technology could be developed this century.
+\item Misalignment risk: There is a significant risk that AI systems could have misaligned goals, posing a threat to humanity.
+\item Ambiguity: It could be difficult to know whether AI systems are dangerously misaligned for various reasons, including AI systems obscuring their dangerous potential from humans.
+\end{enumerate}
+
+\section{High-level strategies for avoiding catastrophe}
+Cautious actors should do the following:
+\begin{enumerate}
+\item Alignment: Invest in technical work to reduce the risk of misaligned AI.
+\item Threat assessment: Assess and demonstrate the risk of misaligned AI.
+\item Avoid races: Prevent races towards deployment.
+\item Selective information sharing: Share information about technical alignment and the dangers of AI systems, and withhold specific code that could be dangerous in the wrong hands.
+\item Global monitoring: Support worldwide monitoring efforts to identify and prevent incautious AI development projects.
+\item Defensive deployment: Deploy safe AI systems urgently to prevent problems from AI systems developed by less cautious actors.
+\end{enumerate}
+\section{Breaking each strategy down}
+\subsection{Broad Alignment Strategies}
+\begin{itemize}
+\item Build limited and unambitious AI systems
+\item Use AI checks and balances - i.e. AI systems to supervise other AI systems.
+\item Digital neuroscience - Try to ``read an AI's mind'' rather than watch behaviour.
+\item Train out bad behaviour
+\begin{itemize}
+\item Beware of the ``King Lear problem'' - an AI behaving well while its under human control doesn't mean it will behave well when it's no longer controlled.
+\end{itemize}
+\end{itemize}
+
+\subsection{Threat assessment}
+\begin{itemize}
+\item Measure AI dangers and demonstrate them to others
+\item This can help convince actors to move cautiously, or allow cautious actors to deploy.
+\end{itemize}
+
+\subsection{Avoiding Races}
+\begin{itemize}
+\item Companies could both be cautious of themselves, but still engage in a race because they are worried their competitors would be even less cautious about deployment.
+\item They should strike deals to collaborate, and possibly even merge.
+\item Global monitoring will also play a part.
+\end{itemize}
+
+\subsection{Selective information sharing}
+\begin{itemize}
+\item As the dangers of AI may not be obvious, it will be crucial to share information about them.
+\item Safety techniques should likely also be shared.
+\item However, specific model weights and even enticing information about capabilities would be dangerous to share for powerful models.
+\item There will likely be hard judgement calls about what to share.
+\end{itemize}
+
+\subsection{Global monitoring}
+\begin{itemize}
+\item We should develop tests to determine whether an AI system is dangerous.
+\item Leading AI companies can self-regulate using those tests and put pressure on new companies to do so as well.
+\item Government regulation and treaties can incorporate similar principles.
+\item Governments should also monitor for dangerous and incautious AI development projects, and may in a dire case be able to use cyberwarfare or conventional military force.
+\end{itemize}
+
+\subsection{Defensive deployment}
+\begin{itemize}
+\item ``Powerful-and-safe AI can help reduce risks from other actors''
+\item AI may be able to help with each of the other listed strategies.
+\item ``If safe AI systems are in wide use, it could be harder for dangerous (similarly powerful) AI systems to do harm'', e.g. AI systems patching security holes defending against cyberattack from other AI systems.
+\end{itemize}
+
+\section{Conclusion}
+\begin{itemize}
+\item ``This seems hard''—even in the case where technical alignment is relatively easy but takes some effort.
+\item Many helpful actions will be out of the ordinary.
+\item It's important that key decision makers in governments and AI companies understand the risks.
+\item Current AI projects can implement aspects of the measures outlined in this blog.
+\end{itemize}
+\end{multicols}
+\end{document}

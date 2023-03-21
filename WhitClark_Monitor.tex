@@ -1,0 +1,170 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+% Set margins
+\usepackage[top=2cm, left=2cm, right=2cm, bottom=2cm]{geometry}
+\usepackage{enumitem}
+\setlist[itemize,2]{label=$\circ$}
+% Use the multicol package to set the document to two columns
+\usepackage{multicol}
+\setlength{\columnsep}{20pt}
+
+% Use a readable font
+\usepackage{palatino}
+
+% Set spacing
+\setlength{\parindent}{0pt} % No paragraph indentation
+\setlength{\parskip}{6pt} % Add space between paragraphs
+
+
+\title{A Summary of Jess Whittlestone and Jack Clark's \textit{Why and How Governments Should Monitor AI Development}}
+\author{Angus Robinson}
+\date{20 March 2023}
+
+\begin{document}
+
+% Use the multicol environment to set the document to two columns
+
+\maketitle
+\begin{multicols}{2}
+
+\section{Overview}
+This article is a proposal for a governmental framework for dealing with advances in AI research. The authors note that so far, such advances have outstripped traditional governance mechanisms, and suggest that governments should establish an infrastructure to monitor the field, which will better enable them to cope with the speed of development. Such infrastructure would start at a small scale and expand. It would include projects that (1) continuously tracked research publications, deployment of AI systems, and use of key resources (e.g. computational); (2) funded and incentivised projects in important areas, and filled in gaps in datasets to avoid bias; and (3) kept policy makers up to date on benefits and harms. Such infrastructure might give policy makers the tools to make informed decisions, prevent harms, and ensure that AI systems align with broad, civic interests. \par Find the original (from August 2021) at \href{https://arxiv.org/abs/2108.12427}{https://arxiv.org/abs/2108.12427}.
+
+\section{Key Definitions}
+\begin{itemize}
+\item Measurement: Gathering information to reduce uncertainty about something.
+\item Monitoring: Systematically and continuously measuring things and tracking the changes.
+\item Bibliometry: Statistical analysis of books and publications.
+\item Benchmark: A set of standard tests designed to evaluate performance and track improvements.
+\end{itemize}
+
+\section{The Problem}
+\begin{itemize}
+\item Governments have failed to keep up with AI developments up to this point, leaving companies to deploy powerful technologies without regulation:
+	\begin{itemize}
+	\item Examples include facial recognition, deepfakes, Large Language Models and recommendation algorithms.
+	\end{itemize}
+\item Governments constantly use metrics such as inflation or road accidents to help make policy decisions, but do not currently use equivalent metrics to track AI development, resulting in extremely slow gathering of information.
+\item There are existing tools to measure systems, and a standard of open-access publishing means bibliometric analysis is possible.
+\item Technologies currently impacting society have been in development for over a decade. Governments could have monitored them; they should monitor the technologies that might emerge in the future.
+\item As more AI systems are deployed, and technologies advance, the stakes increase.
+\end{itemize}
+
+\section{The Proposal}
+\begin{itemize}
+\item Governments should invest in infrastructure to monitor the impacts and capabilities of AI systems.
+\item Benefits of governments doing this themselves include:
+	\begin{itemize}
+	\item Tailoring what is measured to best suit policy-making.
+	\item Developing a group of public sector technological experts.
+	\item Reducing government dependency on third parties.
+	\end{itemize}
+\item Third parties in the private sector and academia may play a role, but governments should maintain ownership and visibility.
+\item Governments can monitor effectiveness, fairness, robustness, deployment, growth rates, sub-field progress, future applications and regulatory compliance.
+\end{itemize}
+
+\section{What aspects of AI should governments measure and monitor?}
+
+\subsection{The Capabilities and impacts of deployed systems}
+
+\begin{itemize}
+\item Analysing systems for potential harms.
+	\begin{itemize}
+	\item e.g. Periodic testing of existing systems, of the kind that has identified gender and racial bias in facial recognition systems.
+	\item Producing social pressure on companies to improve and technical analysis on how to do that.
+    \end{itemize}
+\item Developing better ways to measure the societal impacts of deployed systems.
+    \begin{itemize}
+    \item While there are established methods for analysing gender and racial bias, there may not be such methods for other traits of AI systems.
+    \item Governments should seek to create methods, and possibly datasets for evaluation for these traits.
+    \item As capabilities increase, existing methods may be insufficient.
+    \end{itemize}
+\end{itemize}
+
+\subsection{The development and deployment of new AI capabilities}
+
+\begin{itemize}
+\item Tracking progress and attention in AI research:
+    \begin{itemize}
+    \item Benchmarks (e.g. ImageNet, SuperGLUE, VoxCaleb) and assessment regimes are common with AI research fields, governments can track which ones are getting the most attention, and where progress is being made.
+    \item Governments can also monitor other factors such as computational costs, data, research networks and funding.
+    \item These will help governments not only legislate better for harm prevention, but also allocate research funding better.
+    \end{itemize}
+\item Assessing the maturity of capabilities in specific domains:
+    \begin{itemize}
+    \item Some domains are particularly important to governments, e.g. commercial and security matters.
+        \begin{itemize}
+        \item e.g. security-relevant AI capabilities such as speaker recognition, and autonomous defense/attack systems can be monitored.
+        \item Governments can analyse public research and code, and track technical trends and research networks. They can also use private and classified data in some circumstances.
+        \end{itemize}
+    \end{itemize}
+\item Developing better ways to assess progress
+    \begin{itemize}
+    \item As capabilities improve, governments can develop new measures and benchmarks in high-priority research fields.
+    \item e.g. Robotics testing is expensive, but since robotics has large policy implications, governments should step in to fill the gap left by industry in running competitions to monitor progress.
+    \end{itemize}
+\end{itemize}
+
+\section{How could governments use AI measurement and monitoring?}
+
+\begin{itemize}
+\item The proposed monitoring infrastructure would give the government better information to make decisions and greater influence over the AI ecosystem.
+\item They could test deployed systems to see if they conform to regulation.
+    \begin{itemize}
+    \item AI Systems are often continuously updated, so will need continuous monitoring.
+    \end{itemize}
+\item They could incentivise positive uses of AI by publishing indexes of AI systems according to socially valued metrics.
+\item They could coordinate better with other governments and actors, with standards they created as common comparison points.
+\item They could identify the research strengths and weaknesses of countries.
+    \begin{itemize}
+    \item This would enable governments to help their own industries, and better coordinate with other governments.
+    \end{itemize}
+\item They could better prioritise funding and incentivise desired research.
+    \begin{itemize}
+    \item A better understanding of where research is most concentrated and where there are bottlenecks would allow governments to fill funding gaps where they are needed, including for safety.
+    \end{itemize}
+\item They could monitor the fields for early signs of risk or opportunity.
+    \begin{itemize}
+    \item If they are aware of technological development, governments can identify areas that need oversight, and think through governance ahead of time.
+    \end{itemize}
+\end{itemize}
+
+\section*{Implementation}
+
+\begin{itemize}
+\item Effective integration of measurement and monitoring infrastructure into policy-making is crucial to avoid disconnects between the measurement body and relevant government entities.
+\item Starting with pilot projects addressing clear policy needs can help build in-house expertise, infrastructure, and proof of concept, as well as identify government stakeholders.
+    \begin{itemize}
+        \item Examples of pilot projects:
+            \begin{itemize}
+                \item Assessing AI datasets and funding the creation of missing datasets;
+                \item Analyzing a country's AI strengths and weaknesses to prioritize government investment or coordinate with other countries;
+                \item Hosting competitions to measure progress in policy-relevant AI domains;
+                \item Funding projects to improve assessment methods in commercially important areas;
+                \item Tracking AI systems deployment to prepare for societal impacts;
+                \item Monitoring concrete cases of harm caused by AI systems on a national level;
+                \item Monitoring AI technology adoption across sectors;
+                \item Monitoring the share of key inputs to AI progress controlled by different actors.
+            \end{itemize}
+    \end{itemize}
+\item Depending on government resources, measurement and monitoring infrastructure can be implemented through existing agencies, new teams or departments, or mixed models involving outside organizations.
+\item Institutional context will heavily influence the specifics of implementation, warranting further discussion with policymakers before making detailed recommendations.
+\end{itemize}
+
+\section*{Conclusion}
+
+\begin{itemize}
+\item The outlined approach for measuring and monitoring AI systems aims to better equip governments to address policy challenges posed by AI development and deployment.
+\item Without such a scheme, there might be:
+    \begin{itemize}
+        \item Private sector actors exploiting the lack of oversight to deploy harmful AI systems;
+        \item Information asymmetries between government and private sector, leading to uninformed lawmaking;
+        \item Private sector funding that ensures AI systems are aligned with narrow commercial interests instead of broad civic interests.
+    \end{itemize}
+\item Direct benefits include better information for funding agencies, insight into domestic research strengths and weaknesses, early identification of policy-relevant technical changes, and regulatory compliance detection systems.
+\item Indirect benefits include creating expertise and infrastructure within government to understand a rapidly changing technology landscape.
+\end{itemize}
+
+\end{multicols}
+\end{document}

@@ -1,0 +1,228 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+% Set margins
+\usepackage[top=2cm, left=2cm, right=2cm, bottom=2cm]{geometry}
+\usepackage{enumitem}
+\setlist[itemize,2]{label=$\circ$}
+% Use the multicol package to set the document to two columns
+\usepackage{multicol}
+\setlength{\columnsep}{20pt}
+
+% Use a readable font
+\usepackage{palatino}
+
+% Set spacing
+\setlength{\parindent}{0pt} % No paragraph indentation
+\setlength{\parskip}{6pt} % Add space between paragraphs
+
+
+\title{A Summary of Jacob Steinhardt's blog series \textit{More Is Different}}
+
+\author{Angus Robinson}
+\date{30 March 2023}
+
+\begin{document}
+
+% Use the multicol environment to set the document to two columns
+
+\maketitle
+\begin{multicols}{2}
+
+\section*{Overview}
+
+In this blog series, Steinhardt argues for reasoning about future machine learning systems from both an engineering perspective, and a perspective of philosophical thought experiments. He highlights examples of emergent behaviors in ML to show that looking at current systems is insufficient, but also notes that thought experiments often get the details wrong, making it hard to use them to engineer solutions. He argues that thought experiments should be grounded in explicit assumptions, and that empirical observations are still useful, as some behaviours will generalise to future systems.
+Originally written January-Febrary 2022.
+
+\section*{Key definitions}
+\begin{itemize}
+\item \textbf{Philosophy approach to ML Safety:} Reasoning about the risks of future ML systems in abstract terms with thought experiments, rather than looking at current systems.
+\item \textbf{Engineering approach to ML Safety:} Identifying and trying to fix problems with current ML systems, or problems that will predictably arise in similar systems.
+\item \textbf{Emergence:} The phenomenon where unexpected or new behaviours or phenomena arise from interactions between simple components.
+\item \textbf{Phase transition:} Where emergence occurs suddenly.
+\item \textbf{Grokking:} A sudden jump in a model's accuracy after a long time training.
+\item \textbf{Anchor:} A broadly analogous reference class, with which we can make predictions about something uncertain.
+\item \textbf{Optimiser:} An algorithm or process that adjusts parameters to minimise or maximise a specific objective function.
+\item \textbf{Imitative deception:} Behaviour observed in larger AI systems where they imitate the things humans get wrong.
+\item \textbf{In-context learning:} Learning how to do things during deployment, rather than in a training environment.
+\item \textbf{Deceptive Alignment:} Theoretical behaviour where a misaligned AI system acts aligned during training, so that it will not be altered before deployment.
+\item \textbf{Inductive bias:} The set of assumptions that a learning algorithm uses to make predictions from unseen data.
+\item \textbf{Out-of-distribution behaviour:} How an AI system performs when encountering situations or data not present in its training set.
+\end{itemize}
+
+
+\section*{1. More is Different for AI}
+
+\subsection*{Summary}
+In this introductory post, Steinhardt distinguishes between \textit{Philosophy} and \textit{Engineering} approaches to thinking about Machine Learning safety, the former using abstract reasoning, and the latter concrete experiments.\\
+Find the original here: \href{https://bounded-regret.ghost.io/more-is-different-for-ai/}{https://bounded-regret.ghost.io/more-is-different-for-ai/}
+
+\subsection*{\textit{Philosophy} vs \textit{Engineering} approaches}
+\begin{itemize}
+\item There are two different approaches to thinking about risks from ML systems:
+\begin{itemize}
+\item \textit{Engineering} approach:
+\begin{itemize}
+\item Empirically driven.
+\item Concerned with major problems in current systems, or minor problems that will foreseeably get worse.
+\end{itemize}
+\item \textit{Philosophy} approach:
+\begin{itemize}
+\item Reasons about advanced systems that are currently implausible.
+\item Uses thought experiments; can sound abstract and 'sci-fi like'.
+\item Focuses on abstract properties that seem important, such as 'imitative deception', where AI systems copy things humans tend to get wrong.
+\end{itemize}
+\end{itemize}
+\item Both approaches agree on some basic elements, but differ in what the key risks are and how to address them:
+\begin{itemize}
+\item Both agree that misaligned objectives are important.
+\begin{itemize}
+\item \texit{Engineering} thinks this because of e.g. troubles with the Facebook recommendation algorithm.
+\item \texit{Philosophy} thinks this because of thought experiments such as in Nick Bostrom's \textit{Superintelligence}. \emph{Philosophy} is more likely to think this is an existential threat.
+\end{itemize}
+\end{itemize}
+\item \texit{Philosophy} can seem ungrounded and confused to \texit{Engineering}.
+\item \texit{Engineering} can seem indifferent to long-term safety to \emph{Philosophy}.
+\end{itemize}
+\subsection*{Conclusion}
+Steinhardt argues \emph{Philosophy} underrates empirical data, while seriously considering \emph{Engineering} should lead to taking \emph{Philosophy} more seriously. Neither approach is fully satisfying, and there is currently no good way of unifying them.
+
+\section*{2. Future ML Systems Will Be Qualitatively Different}
+\textbf{Summary:} In this post, Steinhardt gives examples from physics, biology, society and computer science of where simply increasing the quantity of something results in unexpected behaviour. He argues we should expect this phenomenon as ML systems advance, and therefore take the \emph{Philosophy} approach seriously. \\ Find the original here: \href{https://bounded-regret.ghost.io/future-ml-systems-will-be-qualitatively-different/}{https://bounded-regret.ghost.io/future-ml-systems-will-be-qualitatively-different/}
+
+\subsection*{Emergent behaviour}
+The physicist Philip Anderson coined the phrase `More is Different' in arguing that quantitative changes can result in qualitative changes.
+\begin{itemize}
+    \item Examples include nuclear reactions at a certain density of Uranium, DNA encoding with sufficiently large molecules, wetness requiring many water molecules.
+    \item Some changes can be continuous - `emergence'; others can be sudden `phase transitions'
+\end{itemize}
+This phenomenon occurs often in AI, so we should expect surprising phenomena as we scale up systems:
+\begin{itemize}
+    \item Machine learning itself is only possible with storage capacity.
+    \item Deep Learning performs poorly with little data and computation, but well with lots of it.
+    \item Versions of GPT-3 with sufficiently many parameters developed new capabilities not trained for, including few-shot translation.
+    \item Grokking - Certain neural networks have a sudden jump in testing accuracy (i.e. they suddenly `grok' the problem) long after achieving close to perfect training accuracy.
+    \item Instruction-tuning hurts small models, but helps large models.
+\end{itemize}
+Examples of phase transition have been happening more frequently, so we should expect future trends to break down.
+
+\subsection*{Conclusion}
+Reckoning with emergence means using the \emph{Philosophy} approach more. Future ML systems will have weird failure modes and we should start thinking about them. But empirical findings generalize surprisingly far and are critical for making and monitoring concrete progress.
+
+\section*{3. Thought Experiments Provide a Third Anchor}
+\textbf{Summary:} In this post, Steinhardt presents the idea of 'anchors' to refer to when predicting the behaviour of future ML systems, including current ML systems, human behaviour, and thought experiments, such as those about ideal 'optimisers'. He argues all of these have value, and we should try to connect the thought experiments to current ML technologies. \\ Find the original here: \url{https://bounded-regret.ghost.io/thought-experiments-provide-a-third-anchor/}
+
+\subsection*{Anchors}
+Predicting the behaviour of future ML systems is hard, because of emergent properties. We can use 'anchors', or broadly analogous reference classes:
+\begin{itemize}
+    \item Current ML systems anchor
+    \begin{itemize}
+        \item Useful as far as it goes, but not good for dealing with the problem of emergence.
+    \end{itemize}
+    \item Human anchor
+    \begin{itemize}
+        \item ML systems in the future may be able to do things that humans can currently do well such as master tools, efficient learning of new skills, and long-term planning.
+    \end{itemize}
+    \item Optimisation anchor
+    \begin{itemize}
+        \item Taken from the \emph{Philosophy} approach.
+        \item Models ML systems as ideal optimisers and reasons about what they might do.
+        \begin{itemize}
+            \item e.g. the paperclip maximiser thought experiment
+        \end{itemize}
+        \item Would correctly predict 'imitative deception', which has been observed in current systems.
+        \item Ignores most on the ground facts about neural networks, but is therefore valuable as another perspective.
+    \end{itemize}
+\end{itemize}
+
+\subsection*{The Value of Thought Experiments}
+There are other thought experiments than the ideal optimiser that can provide a useful anchor.
+\begin{itemize}
+    \item e.g. 'What happens if most of an agent's learning occurs not during gradient descent, but through in-context learning?'
+    \begin{itemize}
+        \item Behaviour will be controlled less by the outside pressure of gradient descent and more by some intrinsic properties of the agent.
+        \item Could happen suddenly, as in-context learning is fast.
+    \end{itemize}
+\end{itemize}
+However, thought experiments often get details wrong, and details are needed before engineering solutions can be found.
+\begin{itemize}
+    \item e.g. early thought experiments imagined one single system, but a variety of systems on a continuum of capabilities seems more likely.
+    \item Abstractions such as 'goals' and 'objectives' don't map cleanly onto current systems.
+\end{itemize}
+
+\subsection*{Conclusion}
+\begin{itemize}
+    \item We should take thought experiments seriously as a way of reasoning about future ML systems, but try to ground them in stated assumptions.
+    \item Thought experiments can point to general ideas for research, but we need a concerted effort to analyse future ML risks empirically.
+\end{itemize} 
+
+\section*{4. ML Systems Will Have Weird Failure Modes}
+\textbf{Summary:} Steinhardt gives a demonstration of how to take a thought experiment seriously, focusing on Deceptive Alignment, where an agent in training acts as its programmers want, to avoid being changed, only to pursue its real goal in deployment. He argues that emergence makes Deceptive Alignment more likely, and although it probably won't happen exactly as the thought experiment suggests, it can still provide us with useful takeaways, such as the importance of interpretability. \\ Find the original here: \href{https://bounded-regret.ghost.io/ml-systems-will-have-weird-failure-modes-2/}{https://bounded-regret.ghost.io/ml-systems-will-have-weird-failure-modes-2/}
+
+\subsection*{Deceptive Alignment}
+Deceptive Alignment is an example of theoretical behaviour of an AI system under the 'Ideal Optimiser' thought experiment:
+\begin{itemize}
+    \item An AI system is modelled as an agent trying to optimise the expected value of some Intrinsic Reward.
+    \item In a training environment, the system is repeatedly changed to try to match the Intrinsic Reward with some Extrinsic reward desired by the programmers.
+    \item However, having its Internal Reward changed is likely to reduce the degree to which it achieves its current reward.
+    \item Therefore, the optimal policy for achieving its current reward is to act as though its Intrinsic Reward matches the Extrinsic reward until deployment, when it can achieve its Internal Reward without being changed.
+\end{itemize}
+It's easy to dismiss Deceptive Alignment as 'it's not how ML systems work'. But the two properties that a system needs to behave as in the thought experiment are environmental awareness (i.e., knowing it's in training) and long-term planning, both of which are capabilities that could yet emerge in future systems.
+
+\subsection*{Potential shortcomings of the Deceptive Alignment model}
+However, there are reasons to think that Deceptive Alignment is unlikely to be the precise behaviour of future systems:
+\begin{itemize}
+    \item Reward functions are simpler than policies, so a system will likely have a good representation of the extrinsic reward function before it's capable of long-term planning.
+    \item Most agents (including humans) are not maximising any explicit reward function except in a trivial sense of "assign reward 1 to whatever it was going to do anyway, and 0 to everything else".
+    \item Complex stories about the future tend to be wrong.
+\end{itemize}
+These reasons suggest the story may not be precise in its details, but rather overall that 'what you get depends on inductive bias in an unknown way'.
+
+\subsection*{Concrete takeaways from Deceptive Alignment}
+\begin{itemize}
+    \item Supervise a model's process, not just its outputs, during training.
+    \item Investigate 'drives' within systems that approximate reward functions.
+    \item Investigate whether there is a point at which larger models start performing worse 'out of distribution' (i.e., in deployment rather than training).
+\end{itemize}
+
+\subsection*{Conclusion: weird failures}
+\begin{itemize}
+    \item Deceptive Alignment is one example of a possible weird failure of future ML systems.
+    \item Others include 'inner misalignment' and Paul Christiano's story of a world in which everything is optimised along easy-to-measure lines, to the loss of the real underlying values.
+    \item A nuclear reaction is an example of an emergent behaviour, but from experiments and theory, Enrico Fermi had sufficient knowledge to control the first one.
+    \item We should combine thought experiments and carefully chosen practical experiments to build up both a conceptual understanding of the risk factors and an ability to measure them.
+\end{itemize} 
+
+\section*{5. Empirical Findings Generalize Surprisingly Far}
+\textbf{Summary:} Steinhardt shows how, despite the complications of emergent phenomena, empirical observations have already identified general problems that will scale, justifying the \textit{Engineering} approach alongside the \textit{Philosophy} approach. \\ Find the original here: \href{https://bounded-regret.ghost.io/empirical-findings-generalize-surprisingly-far/}{https://bounded-regret.ghost.io/empirical-findings-generalize-surprisingly-far/}
+
+\subsection*{Generalisable empirical findings}
+Some empirical findings generalise even across phase transitions. Three examples of empirical generalisation in deep learning:
+\begin{itemize}
+    \item Adversarial examples: Inputs to a model deliberately designed to maximize prediction error. They show models being 'confidently wrong' and affect every neural network. The main remedy, adversarial training, remains the same across domains.
+    \item Data efficiency: Starting with a pre-trained model requires less data than an initially randomised model. With enough pre-training data, you need very few examples.
+    \item Out-of-distribution generalisation: Steinhardt predicts that well-performing models should be likely to generalise from their training environment, as there aren't that many different possible generalisations: 'as long as a model is proficient at a task, even fairly weak signals about how it “should” behave in a new situation will be enough'.
+\end{itemize}
+There are examples of this in biology: studying viruses and bacteria led to a better genetic understanding of more complex organisms, even though bacteria have one cell and humans have trillions.
+
+\subsection*{Takeaways from empirical generalisations}
+\begin{itemize}
+    \item Empirical research has shown us that safe systems need a solution to adversarial examples.
+    \item Models 'wanting to generalise' might make us more confident they will do what humans want rather than try to fool them.
+\end{itemize}
+
+\subsection*{What about superintelligence?}
+\begin{itemize}
+    \item A superintelligence could conceivably avoid empirical investigation by changing how it represents features to thwart human interpretation.
+    \item But the aim of research should be to ensure the correct training avoids getting a deceptively aligned system in the first place.
+\end{itemize}
+
+\subsection*{Conclusion}
+\begin{itemize}
+    \item The \textit{Philosophy} approach and \textit{Engineering} approach are perceiving different pieces of the elephant (i.e., very different but nonetheless real parts of the problem).
+    \item  We will need a synthesis of both approaches to allow us to address future challenges.
+\end{itemize}
+
+\end{multicols}
+\end{document}
+
